@@ -1,0 +1,415 @@
+﻿@model  List<Survey.Entidades.Ctl_Survey_Questions>
+
+@{
+            ViewBag.Title = "Index";
+            Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row-fluid">
+    <div class="w-box">
+        <div class="w-box-header">
+            <h4>Datos de la actividad</h4>
+        </div>
+        <div class="w-box-content">
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="span3">
+                    </div>
+                    <div class="span2">
+                        <h5>id Actividad</h5>
+                        <label id="idActividad" name="idActividad" class="label label-info">@ViewBag.idActividad</label>
+                        @*<input type="text" placeholder="Escribe algo…" class="span3" id="idActividad" name="idActividad" value="@ViewBag.idActividad" />*@
+                    </div>
+                    <div class="span2">
+                        <h5>id Usuario</h5>
+                        <label id="idUsuario" name="idUsuario" class="label label-info">@ViewBag.idUsuario</label>
+                        @*<input type="text" placeholder="Escribe algo…" class="span3" id="idUsuario" name="idUsuario" value="@ViewBag.idUsuario" />*@
+                    </div>
+                    <div class="span2">
+                        <h5>tarea</h5>
+                        <label id="tarea" name="tarea" class="label label-info">@ViewBag.task</label>
+                        @*<input type="text" placeholder="Escribe algo…" class="span3" id="tarea" name="tarea" value="@ViewBag.task" />*@
+                    </div>
+                    <div class="span3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    </div>
+            <div class="row-fluid">
+
+                <div class="span2">
+                    @using (Html.BeginForm("VistaPreliminar", "EncuestaDinamica", FormMethod.Post))
+                    {
+                        <input type="submit" id="btnVistaPreliminarVacio" class="btn btn-info btn-small" value="Vista preliminar cuestionario vacío" />
+                        @*<button type="button" class="btn btn-info btn-small" id="btnVistaPreliminarVacio">Vista preliminar cuestionario vacío</button>*@
+                    }
+
+                </div>
+                <div class="span2">
+                    @using (Html.BeginForm("VistaPreliminarPreguntasRespuestas", "EncuestaDinamica", FormMethod.Post))
+                    {
+                        <input type="submit" id="btnVistaPreliminar" class="btn btn-info btn-small" value="Vista preliminar cuestionario en proceso" />
+                        @*<button type="button" class="btn btn-info btn-small" id="btnVistaPreliminar">Vista preliminar cuestionario en proceso</button>*@
+
+                    }
+                </div>
+
+                </div>
+
+
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="w-box w-box-blue">
+                        <div class="w-box-header">
+                            <h4>Listado Preguntas</h4>
+                        </div>
+                        <div class="w-box-content">
+                            <table id="tblEncuesta" class="dataTables_full table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="span1">NoPregunta</th>
+                                        <th class="span5">Pregunta</th>
+                                        <th class="span6">Respuestas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        if (item.idQuestionType == 1)
+                                        {
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+                                                    @if (ViewBag.Estatus)
+                                                    {
+                                                    <label for=""> </label> @Html.TextBox("FIELD_" + item.id.ToString(), @item.respuesta, new { @class = "texto span11 ", @maxlength=item.textLength , @readonly = "true" })
+                                                    }
+                                                    else
+                                                    {
+                                                    <label for=""> </label> @Html.TextBox("FIELD_" + item.id.ToString(), @item.respuesta, new { @class = "texto span11 ", @maxlength = item.textLength })
+                                                    }
+                                                </td>
+
+
+                                            </tr>
+                                        }
+                                        if (item.idQuestionType == 2)
+                                        {
+                                            var textoseparado = item.optionQuestion.Split('|');
+                                            var n = 1;
+                                            var respuestaArray = item.respuesta.Split('|');
+                                            <tr>
+                                                <td > @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td > @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td >
+
+                                                    @for (int i = 0; i < textoseparado.Count() - 1; i++)
+                                                    {
+                                                        if (ViewBag.Estatus)
+                                                        {
+                                                        <label for="">@textoseparado[i] </label> @Html.TextBox("FIELD_" + item.id.ToString() + "_" + n.ToString(), respuestaArray[i], new { @class = "texto span10", @maxlength = item.textLength, @readonly = @ViewBag.Estatus })<br />
+                                                        }
+                                                        else
+                                                        {
+                                                            <label for="">@textoseparado[i] </label> @Html.TextBox("FIELD_" + item.id.ToString() + "_" + n.ToString(), respuestaArray[i], new { @class = "texto span10", @maxlength = item.textLength })<br />
+                                                        }
+                                                        n = n + 1;
+                                                    }
+                                                </td>
+
+
+                                            </tr>
+                                        }
+                                        if (item.idQuestionType == 3)
+                                        {
+                                            var textoseparado = item.optionQuestion.Split('|');
+                                            var n = 1;
+                                            var respuestaArray = item.respuesta.Split('|');
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+
+                                                    @for (int i = 0; i < textoseparado.Count() - 1; i++)
+                                                    {
+                                                        if (ViewBag.Estatus)
+                                                        {
+                                                       @textoseparado[i] @Html.CheckBox("FIELD_" + item.id.ToString() + "_" + n.ToString(), respuestaArray[i] == "1" ? true : false, new { @class = "checkbox span2", @readonly = @ViewBag.Estatus })<br />
+
+                                                        }
+                                                        else
+                                                        {
+                                                        @textoseparado[i] @Html.CheckBox("FIELD_" + item.id.ToString() + "_" + n.ToString(), respuestaArray[i] == "1" ? true : false, new { @class = "checkbox span2" })<br />
+                                                        }
+                                                        n = n + 1;
+                                                    }
+</td>
+
+
+                                            </tr>
+                                        }
+
+                                        if (item.idQuestionType == 4)
+                                        {
+                                            var textoseparado = item.optionQuestion.Split('|');
+
+
+                                            List<SelectListItem> listItems = new List<SelectListItem>();
+
+                                            for (int i = 0; i < textoseparado.Count(); i++)
+                                            {
+                                                if (i == 0)
+                                                {
+                                                    listItems.Add(new SelectListItem
+                                                    {
+                                                        Text = "--Seleccione una opción--",
+                                                        Value = i.ToString()
+                                                    });
+                                                }
+                                                else
+                                                {
+                                                    listItems.Add(new SelectListItem
+                                                    {
+                                                        Text = textoseparado[i - 1],
+                                                        Value = i.ToString()
+                                                    });
+                                                }
+
+                                            }
+
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+                                                    @if (ViewBag.Estatus)
+                                                    {
+                                                        @Html.DropDownList("FIELD_" + item.id.ToString(), listItems, listItems[int.Parse(item.respuesta)].Text, new { @class = "combobox span10", @readonly = @ViewBag.Estatus })<br />
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.DropDownList("FIELD_" + item.id.ToString(), listItems, listItems[int.Parse(item.respuesta)].Text, new { @class = "combobox span10" })<br />
+                                                    }
+                                                </td>
+
+
+                                            </tr>
+                                        }
+
+                                        if (item.idQuestionType == 5)
+                                        {
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+                                                    @if (ViewBag.Estatus)
+                                                    {
+                                                        <input type="file" id="FIELD_@item.id.ToString()" readonly = "readonly" class = "span10" /><button type="button" class="button.upload" id="btnUpload_@item.id.ToString()" >Subir foto</button>
+                                                    }
+                                                    else
+                                                    {
+                                                        <input type="file" id="FIELD_@item.id.ToString()"  class="span10" /><button type="button" class="uploadButton" id="btnUpload_@item.id.ToString()" >Subir foto</button>
+                                                    }
+                                                </td>
+
+
+                                            </tr>
+                                        }
+
+                                        if (item.idQuestionType == 6)
+                                        {
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+                                                    @if (ViewBag.Estatus)
+                                                    {
+                                                        @Html.TextBox("FIELD_" + item.id.ToString(), item.respuesta, new { @class = "texto span10", @maxlength = "100", @type = "number", @readonly = @ViewBag.Estatus })
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.TextBox("FIELD_" + item.id.ToString(), item.respuesta, new { @class = "texto span10", @maxlength = "100", @type = "number" })
+                                                    }
+                                                </td>
+
+
+                                            </tr>
+                                        }
+
+                                        if (item.idQuestionType == 7)
+                                        {
+                                            var textoseparado = item.optionQuestion.Split('|');
+                                            var n = 1;
+                                            var respuestaArray = item.respuesta.Split('|');
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+
+                                                    @for (int i = 0; i < textoseparado.Count() - 1; i++)
+                                                    {
+                                                        if (ViewBag.Estatus)
+                                                        {
+                                                        <label for=""> @textoseparado[i]</label> @Html.TextBox("FIELD_" + item.id.ToString() + "_" + n.ToString(), respuestaArray[i], new { @class = "texto span10", @maxlength = "100", @type = "number", @readonly = @ViewBag.Estatus })<br />
+
+                                                        }
+                                                        else
+                                                        {
+                                                            <label for=""> @textoseparado[i]</label> @Html.TextBox("FIELD_" + item.id.ToString() + "_" + n.ToString(), respuestaArray[i], new { @class = "texto span10", @maxlength = "100", @type = "number" })<br />
+                                                        }
+                                                        n = n + 1;
+                                                    }
+                                                </td>
+
+
+                                            </tr>
+                                        }
+
+                                        if (item.idQuestionType == 8)
+                                        {
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+                                                    @if (ViewBag.Estatus)
+                                                    {
+                                                    <label class="radio">si @Html.RadioButton("FIELD_" + item.id.ToString() + "_", "si", item.respuesta == "1" ? true : false, new { @id = "FIELD_" + item.id.ToString() + "_1", @class = "radioCheck", @readonly = @ViewBag.Estatus })</label>
+                                                    <label class="radio">no  @Html.RadioButton("FIELD_" + item.id.ToString() + "_", "no", item.respuesta == "0" ? true : false, new { @id = "FIELD_" + item.id.ToString() + "_2", @class = "radioCheck", @readonly = @ViewBag.Estatus })</label>
+                                                    }
+                                                    else
+                                                    {
+                                                    <label class="radio">si @Html.RadioButton("FIELD_" + item.id.ToString() + "_", "si", item.respuesta == "1" ? true : false, new { @id = "FIELD_" + item.id.ToString() + "_1", @class = "radioCheck" })</label>
+                                                    <label class="radio">no @Html.RadioButton("FIELD_" + item.id.ToString() + "_", "no", item.respuesta == "0" ? true : false, new { @id = "FIELD_" + item.id.ToString() + "_2", @class = "radioCheck" })</label>
+                                                    }
+                                                </td>
+
+                                            </tr>
+                                        }
+                                        if (item.idQuestionType == 9)
+                                        {
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+                                                    @if (ViewBag.Estatus)
+                                                    {
+                                                        @Html.TextBox("FIELD_" + item.id.ToString(), item.respuesta, new { @class = "texto span10", @type = "date", @readonly = @ViewBag.Estatus })
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.TextBox("FIELD_" + item.id.ToString(), item.respuesta, new { @class = "texto span10", @type = "date"})
+                                                    }
+                                                </td>
+
+
+                                            </tr>
+                                        }
+
+                                        if (item.idQuestionType == 10)
+                                        {
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+                                                    @if (ViewBag.Estatus)
+                                                    {
+                                                        @Html.TextBox("FIELD_" + item.id.ToString(), item.respuesta, new { @class = "texto span10", @type = "time", @readonly = @ViewBag.Estatus })
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.TextBox("FIELD_" + item.id.ToString(), item.respuesta, new { @class = "texto span10", @type = "time"})
+                                                    }
+                                                </td>
+
+
+                                            </tr>
+                                        }
+
+                                        if (item.idQuestionType == 11)
+                                        {
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+                                                    @{
+                                                        if (ViewBag.Estatus)
+                                                        {
+                                                            var cadenaArray = item.respuesta.Split(' ');
+                                                            cadenaArray[0] = DateTime.Parse(cadenaArray[0]).ToString("yyyy-MM-dd");
+                                                            @Html.TextBox("FIELDD_" + item.id.ToString(), cadenaArray[0], new { @class = "span3", @readonly = @ViewBag.Estatus }) @Html.TextBox("FIELD_" + item.id.ToString(), cadenaArray[1], new { @class = "span3", @type = "time", @readonly = @ViewBag.Estatus })
+                                                        }
+                                                        else
+                                                        {
+                                                            if (item.respuesta != "")
+                                                            {
+                                                                var cadenaArray = item.respuesta.Split(' ');
+                                                                cadenaArray[0] = DateTime.Parse(cadenaArray[0]).ToString("yyyy-MM-dd");
+                                                                cadenaArray[1] = DateTime.Parse(cadenaArray[1]).ToString("hh:mm:ss");
+                                                            @Html.TextBox("FIELDD_" + item.id.ToString(), cadenaArray[0], new { @class = "span3", @type = "date" }) @Html.TextBox("FIELD_" + item.id.ToString(), cadenaArray[1], new { @class = "fechaTiempo span3", @type = "time" })
+                                                            }
+                                                            else
+                                                            {@Html.TextBox("FIELDD_" + item.id.ToString(), item.respuesta, new { @class = "span3", @type = "date" }) @Html.TextBox("FIELD_" + item.id.ToString(), item.respuesta, new { @class = "fechaTiempo span3", @type = "time" })
+                                                                }
+                                                            }
+                                                        }
+                                                </td>
+
+
+                                            </tr>
+                                        }
+
+                                        if (item.idQuestionType == 12)
+                                        {
+                                            var respuestaArray = item.respuesta.Split('|');
+                                            <tr>
+                                                <td> @Html.DisplayFor(itemModel => item.numericalOrder, null)</td>
+                                                <td> @Html.DisplayFor(itemModel => item.question, null)</td>
+                                                <td>
+                                                    @if (ViewBag.Estatus)
+                                                    {
+                                                        <label>Latitud: </label> @Html.TextBox("FIELD_" + item.id.ToString() + "_lat", respuestaArray[0], new { @class = "texto span10", @maxlength = "50", @readonly = @ViewBag.Estatus })<br />
+
+                                                        <label>Longitud: </label>  @Html.TextBox("FIELD_" + item.id.ToString() + "_lon", respuestaArray[1], new { @class = "texto span10", @maxlength = "50", @readonly = @ViewBag.Estatus })
+                                                    }
+                                                    else
+                                                    {
+                                                        <label>Latitud: </label> @Html.TextBox("FIELD_" + item.id.ToString() + "_lat", respuestaArray[0], new { @class = "texto span10" , @maxlength = "50" })<br />
+
+                                                        <label>Longitud: </label> @Html.TextBox("FIELD_" + item.id.ToString() + "_lon", respuestaArray[1], new { @class = "texto span10", @maxlength = "50" })
+                                                    }
+
+                                                </td>
+
+
+                                            </tr>
+                                        }
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    @if(!ViewBag.Estatus )
+                    { 
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="span10"></div>
+                            <div class="span2"><button type="button" class="btn btn-primary" id="btnCerrarEncuesta">Cerrar Encuesta</button></div>
+                        </div>
+                    </div>
+                    }
+                        </div>
+                    </div>
+
+
+
+                    @section Scripts
+{
+                        <script src="~/ScriptPages/jsEncuestaDinamica.js"></script>
+                        <script src="~/ScriptPages/jsSurveyDataTables.js"></script>
+                    }
+

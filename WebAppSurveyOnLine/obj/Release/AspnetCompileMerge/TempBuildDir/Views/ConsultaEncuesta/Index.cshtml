@@ -1,0 +1,127 @@
+﻿@model List<Survey.Entidades.Consulta> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="w-box" id="n_regular_elements">
+    <div class="w-box-content cnt_a">
+
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="w-box w-box-blue">
+                    <div class="w-box-header">
+                        <h4>Listado de Encuestas</h4>
+                    </div>
+                    <div class="w-box-content">
+                        <table id="dt_Preguntas" class="dataTables_full table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Actividad</th>
+                                    <th>Unidad</th>
+                                    <th>Nombre de la Encuesta</th>
+                                    <th>TableName</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                            {
+
+                                <tr>
+
+                                    <td>
+
+                                        @Html.DisplayFor(modelItem => item.Usuario)
+
+                                    </td>
+
+                                    <td>
+
+                                        @Html.DisplayFor(modelItem => item.Actividad)
+
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Unidad)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.NombreEncuesta)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TableName)
+                                    </td>
+                                    <td>
+                                        <div class="btn-group"><button type="button" id="@item.id" class="consultaButton btn btn-mini" title="Consulta"><i class="icon-search"></i></button></div>
+                                    </td>
+                                </tr>
+                        }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+       
+
+
+    </div>
+    <div class="w-box-content cnt_a">
+      
+
+        @if (ViewBag.columnas != null)
+        {
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="w-box w-box-blue">
+                    <div class="w-box-header">
+                        <h4>Listado de Respuestas</h4>
+                    </div>
+                    <div class="w-box-content">
+                        <table id="dt_tblRespuestas" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>IdUser</th>
+                                    <th>Task</th>
+                                    @{
+                                        foreach (var item in ViewBag.columnasTxt)
+                                        {
+                                <th>@item</th>
+                                            }
+                                        }
+                                    <th>CloseDate</th>
+                                    <th>Status</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var row in ViewBag.rows)
+                            {
+                                <tr>
+                                    @foreach (var col in ViewBag.columnas)
+                                {
+                                    <td>@row[col.ColumnName]</td>
+                            }
+                                </tr>
+                        }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+}
+    </div>
+</div>
+@section Scripts
+{
+    <script src="~/ScriptPages/jsConsulta.js"></script>
+    <script src="~/ScriptPages/jsSurveyDataTables.js"></script>
+   
+}
+

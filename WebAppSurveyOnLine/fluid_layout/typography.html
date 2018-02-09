@@ -1,0 +1,496 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Beoro Admin Template v1.1</title>
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        
+    <!-- common stylesheets-->
+        <!-- bootstrap framework css -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
+        <!-- iconSweet2 icon pack (16x16) -->
+            <link rel="stylesheet" href="img/icsw2_16/icsw2_16.css">
+        <!-- splashy icon pack -->
+            <link rel="stylesheet" href="img/splashy/splashy.css">
+        <!-- flag icons -->
+            <link rel="stylesheet" href="img/flags/flags.css">
+        <!-- power tooltips -->
+            <link rel="stylesheet" href="js/lib/powertip/jquery.powertip.css">
+        <!-- google web fonts -->
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Abel">
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+
+    <!-- aditional stylesheets -->
+
+
+        <!-- main stylesheet -->
+            <link rel="stylesheet" href="css/beoro.css">
+
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css"><![endif]-->
+        <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css"><![endif]-->
+            
+        <!--[if lt IE 9]>
+            <script src="js/ie/html5shiv.min.js"></script>
+            <script src="js/ie/respond.min.js"></script>
+            <script src="js/lib/flot-charts/excanvas.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body class="bg_d">
+    <!-- main wrapper (without footer) -->    
+        <div class="main-wrapper">
+        <!-- top bar -->
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <div class="pull-right top-search">
+                            <form action="" >
+                                <input type="text" name="q" id="q-main">
+                                <button class="btn"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                        <div id="fade-menu" class="pull-left">
+                            <ul class="clearfix" id="mobile-nav">
+                                <li>
+                                    <a href="javascript:void(0)">Forms</a>
+                                    <ul>
+                                        <li>
+                                            <a href="form_elements.html">Form elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="form_validation.html">Form validation</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Components</a>
+                                    <ul>
+                                        <li>
+                                            <a href="calendar.html">Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a href="charts.html">Charts</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact_list.html">Contact List</a>
+                                        </li>
+                                        <li>
+                                            <a href="datatables.html">Datatables</a>
+                                        </li>
+                                        <li>
+                                            <a href="editable_elements.html">Editable Elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="file_manager.html">File manager</a>
+                                        </li>
+                                        <li>
+                                            <a href="gallery.html">Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a href="gmaps.html">Google Maps</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Tables</a>
+                                            <ul>
+                                                <li><a href="tables_regular.html">Regular Tables</a></li>
+                                                <li><a href="table_stacking.html">Stacking Table</a></li>
+                                                <li><a href="table_examples.html">Table examples</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="wizard.html">Wizard</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">UI Elements</a>
+                                    <ul>
+                                        <li><a href="alerts_buttons.html">Alerts, Buttons</a></li>
+                                        <li><a href="grid.html">Grid</a></li>
+                                        <li><a href="icons.html">Icons</a></li>
+                                        <li>
+                                            <a href="notifications.html">Notifications</a>
+                                        </li>
+                                        <li><a href="tabs_accordions.html">Tabs, Accordions</a></li>
+                                        <li><a href="tooltips_popovers.html">Tooltips, Popovers</a></li>
+                                        <li><a href="typography.html">Typography</a></li>
+                                        <li><a href="widgets.html">Widgets</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Other pages</a>
+                                    <ul>
+                                        <li><a href="ajax_content.html">Ajax content</a></li>
+                                        <li><a href="blank.html">Blank page</a></li>
+                                        <li><a href="blog_page.html">Blog page</a></li>
+                                        <li><a href="blog_page_single.html">Blog page (single)</a></li>
+                                        <li><a href="error_404.html">Error 404</a></li>
+                                        <li><a href="help_faq.html">Help/Faq</a></li>
+                                        <li><a href="invoices.html">Invoices</a></li>
+                                        <li><a href="login.html">Login Page</a></li>
+                                        <li><a href="mailbox.html">Mailbox</a></li>
+                                        <li><a href="user_profile.html">User profile</a></li>
+                                        <li><a href="settings.html">Site Settings</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Sub-menu</a>
+                                    <ul>
+                                        <li><a href="#">Section 1</a></li>
+                                        <li><a href="#">Section 2</a></li>
+                                        <li><a href="#">Section 3</a></li>
+                                        <li>
+                                            <a href="#">Section 4</a>
+                                            <ul>
+                                                <li><a href="#">Section 4.1</a></li>
+                                                <li><a href="#">Section 4.2</a></li>
+                                                <li><a href="#">Section 4.3</a></li>
+                                                <li>
+                                                    <a href="#">Section 4.4</a>
+                                                    <ul>
+                                                        <li><a href="#">Section 4.4.1</a></li>
+                                                        <li><a href="#">Section 4.4.2</a></li>
+                                                        <li><a href="#">Section 4.4.4</a></li>
+                                                        <li><a href="#">Section 4.4.5</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Section5</a></li>
+                                        <li><a href="#">Section6</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- header -->
+            <header>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <div class="main-logo"><a href="dashboard.html"><img src="img/beoro_logo.png" alt="Beoro Admin"></a></div>
+                        </div>
+                        <div class="span5">
+                            <nav class="nav-icons">
+                                <ul>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Dashboard"><i class="icsw16-home"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Content"><i class="icsw16-create-write"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Mailbox"><i class="icsw16-mail"></i><span class="badge badge-info">6</span></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Comments"><i class="icsw16-speech-bubbles"></i><span class="badge badge-important">14</span></a></li>
+                                    <li class="active"><span class="ptip_s" title="Statistics (active)"><i class="icsw16-graph"></i></span></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Settings"><i class="icsw16-cog"></i></a></li>
+                                </ul>
+                             </nav>
+                        </div>
+                        <div class="span4">
+                            <div class="user-box">
+                                <div class="user-box-inner">
+                                    <img src="img/avatars/avatar.png" alt="" class="user-avatar img-avatar">
+                                    <div class="user-info">
+                                        Welcome, <strong>Jonathan</strong>
+                                        <ul class="unstyled">
+                                            <li><a href="user_profile.html">Settings</a></li>
+                                            <li>&middot;</li>
+                                            <li><a href="login.html">Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <!-- breadcrumbs -->
+            <div class="container-fluid">
+                <ul id="breadcrumbs">
+                    <li><a href="javascript:void(0)"><i class="icon-home"></i></a></li>
+                    <li><a href="javascript:void(0)">Content</a></li>
+                    <li><a href="javascript:void(0)">Article: Lorem ipsum dolor...</a></li>
+                    <li><a href="javascript:void(0)">Comments</a></li>
+                    <li><span>Lorem ipsum dolor sit amet...</span></li>
+                </ul>
+            </div>
+            
+        <!-- main content -->
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="w-box">
+                            <div class="w-box-header">
+                                <h4>Typography</h4>
+                            </div>
+                            <div class="w-box-content cnt_a">
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <p class="heading_a">Headings</p>
+                                        <h1>H1 Lorem ipsum</h1>
+                                        <h2>H2 Lorem ipsum</h2>
+                                        <h3>H3 Lorem ipsum</h3>
+                                        <h4>H4 Lorem ipsum</h4>
+                                        <h5>H5 Lorem ipsum</h5>
+                                        <h6>H6 Lorem ipsum</h6>
+                                    </div>
+                                    <div class="span6">
+                                        <p class="heading_a">Blockquotes</p>
+                                        <div class="clearfix">
+                                            <blockquote>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing&hellip;</p>
+                                                <small>Someone famous</small>
+                                            </blockquote>
+                                            <blockquote class="pull-right">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing&hellip;</p>
+                                                <small>Someone famous</small>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <p class="heading_a">Labels</p>
+                                            <span class="label">.label</span>
+                                            <span class="label label-success">.label-success</span>
+                                            <span class="label label-warning">.label-warning</span>
+                                            <span class="label label-important">.label-important</span>
+                                            <span class="label label-info">.label-info</span>
+                                            <span class="label label-inverse">.label-inverse</span>
+                                    </div>
+                                    <div class="span6">
+                                        <p class="heading_a">Badges</p>
+                                            <span class="badge">.badge</span>
+                                            <span class="badge badge-success">.badge-success</span>
+                                            <span class="badge badge-warning">.badge-warning</span>
+                                            <span class="badge badge-important">.badge-important</span>
+                                            <span class="badge badge-info">.badge-info</span>
+                                            <span class="badge badge-inverse">.badge-inverse</span>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span6">
+                                        <p class="heading_a">Emphasis classes</p>
+                                        <code class="sepH_a">.muted</code>
+                                        <p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+                                        <code class="sepH_a">.text-warning</code>
+                                        <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+                                        <code class="sepH_a">.text-error</code>
+                                        <p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                        <code class="sepH_a">.text-info</code>
+                                        <p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+                                        <code class="sepH_a">.text-success</code>
+                                        <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                                    </div>
+                                    <div class="span6">
+                                        <p class="heading_a">Hero Unit</p>
+                                            <div class="hero-unit">
+                                                <h2>Lorem ipsum, dolor</h2>
+                                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                                                <a class="btn btn-beoro-3 btn-large">Learn more</a>
+                                            </div>
+                                    </div>
+                                </div>
+                                <p class="heading_a">Lists</p>
+                                <div class="row-fluid">
+                                    <div class="span3">
+                                        <p><code class="sepH_b">&lt;ul&gt;</code></p>
+                                        <ul>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                        </ul>
+                                    </div>
+                                    <div class="span3">
+                                        <p><code>&lt;ul class="unstyled"&gt;</code></p>
+                                        <ul class="unstyled">
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                        </ul>
+                                    </div>
+                                    <div class="span3">
+                                        <p><code>&lt;ol&gt;</code></p>
+                                        <ol>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                        </ol>
+                                    </div>
+                                    <div class="span3">
+                                        <p><code>combined</code></p>
+                                        <ol>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>
+                                                <ul>
+                                                    <li>Lorem ipsum, dolor sit</li>
+                                                    <li>Lorem ipsum, dolor sit</li>
+                                                </ul>
+                                            </li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span3">
+                                        <p><code>&lt;ul class="list_a"&gt;</code></p>
+                                        <ul class="list_a">
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                        </ul>
+                                    </div>
+                                    <div class="span3">
+                                        <p><code>&lt;ul class="list_b"&gt;</code></p>
+                                        <ul class="list_b">
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                        </ul>
+                                    </div>
+                                    <div class="span3">
+                                        <p><code>&lt;ul class="list_c"&gt;</code></p>
+                                        <ul class="list_c">
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                        </ul>
+                                    </div>
+                                    <div class="span3">
+                                        <p><code>&lt;ul class="list_d"&gt;</code></p>
+                                        <ul class="list_d">
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                            <li>Lorem ipsum, dolor sit</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <div class="row-fluid">
+                                            <div class="span6">
+                                                <h3 class="heading">Description</h3>
+                                                <p><code>&lt;dl&gt;</code></p>
+                                                <dl>
+                                                    <dt>Lorem ipsum</dt>
+                                                    <dd>A description list is perfect for defining terms.</dd>
+                                                    <dt>dolor sit amet</dt>
+                                                    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                                    <dt>Malesuada porta</dt>
+                                                    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                                </dl> 
+                                            </div>
+                                            <div class="span6">
+                                                <h3 class="heading">Horizontal Description</h3>
+                                                <p><code>&lt;dl class="dl-horizontal"&gt;</code></p>
+                                                <dl class="dl-horizontal">
+                                                    <dt>Lorem ipsum</dt>
+                                                    <dd>A description list is perfect for defining terms.</dd>
+                                                    <dt>dolor sit amet</dt>
+                                                    <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+                                                    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                                    <dt>Malesuada porta</dt>
+                                                    <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                                                </dl> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <div class="row-fluid">
+                                            <div class="span6">
+                                                <p class="heading_a">Pre</p>
+                                                <p><code>&lt;pre&gt;</code></p>
+<pre class="sepH_c">
+if ( typeof target === "boolean" ) {
+  deep = target;
+  target = arguments[1] || {};
+  // skip the boolean and the target
+  i = 2;
+}
+</pre>
+                                                <p><code>&lt;pre class="prettyprint linenums"&gt;</code></p>
+<pre class="prettyprint linenums">
+if ( typeof target === "boolean" ) {
+  deep = target;
+  target = arguments[1] || {};
+  // skip the boolean and the target
+  i = 2;
+}
+</pre>
+                                            </div>
+                                            <div class="span6">
+                                                <p class="heading_a">Code</p>
+                                                <p class="sepH_c"><code>&lt;body class="main_class"&gt;</code></p>
+                                                <p class="sepH_c"><code>if ( typeof target === "boolean" )</code></p>
+                                                <p class="sepH_c">Lorem ipsum <code>deep = target</code> dolor sit amet, porta felis euismod semper eget lacinia odio sem nec&hellip;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_space"></div>
+        </div> 
+
+    <!-- footer --> 
+        <footer>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span5">
+                        <div>&copy; Your Company 2012</div>
+                    </div>
+                    <div class="span7">
+                        <ul class="unstyled">
+                            <li><a href="#">First link</a></li>
+                            <li>&middot;</li>
+                            <li><a href="#">Second link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    <!-- Common JS -->
+        <!-- jQuery framework -->
+            <script src="js/jquery.min.js"></script>
+        <!-- bootstrap Framework plugins -->
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- top menu -->
+            <script src="js/jquery.fademenu.js"></script>
+        <!-- top mobile menu -->
+            <script src="js/selectnav.min.js"></script>
+        <!-- actual width/height of hidden DOM elements -->
+            <script src="js/jquery.actual.min.js"></script>
+        <!-- jquery easing animations -->
+            <script src="js/jquery.easing.1.3.min.js"></script>
+        <!-- power tooltips -->
+            <script src="js/lib/powertip/jquery.powertip-1.1.0.min.js"></script>
+        <!-- date library -->
+            <script src="js/moment.min.js"></script>
+        <!-- common functions -->
+            <script src="js/beoro_common.js"></script>
+
+     
+        <!-- code prettifier -->
+            <script src="js/lib/google-code-prettify/prettify.js"></script>
+            <script type="text/javascript">
+                if(typeof prettyPrint == 'function') {
+                    prettyPrint();
+                }
+            </script>
+
+    </body>
+</html>

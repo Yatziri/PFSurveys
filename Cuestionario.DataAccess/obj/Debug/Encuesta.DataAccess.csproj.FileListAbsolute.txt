@@ -1,0 +1,5 @@
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\obj\Debug\Encuesta.DataAccess.csprojResolveAssemblyReference.cache
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\bin\Debug\Encuesta.DataAccess.dll
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\bin\Debug\Encuesta.DataAccess.pdb
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\obj\Debug\Encuesta.DataAccess.dll
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\obj\Debug\Encuesta.DataAccess.pdb

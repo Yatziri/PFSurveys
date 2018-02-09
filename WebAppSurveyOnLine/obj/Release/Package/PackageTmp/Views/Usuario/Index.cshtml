@@ -1,0 +1,119 @@
+﻿@model List<Survey.Entidades.Usuario>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row-fluid">
+    <div class="span12">
+        <div class="w-box w-box-blue">
+            <div class="w-box-header">
+                <h4>Listado de Usuarios</h4>
+            </div>
+            <div class="w-box-content" id="Grid">
+                <table id="dt_Preguntas" class="dataTables_full table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Name</th>
+                            <th>LastName</th>
+                            <th>Surname</th>
+                            <th>Status</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+
+                                        @Html.DisplayFor(modelItem => item.email)
+
+                                    </td>
+                                    <td>
+
+                                        @Html.DisplayFor(modelItem => item.name)
+
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.lastName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.surName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.status)
+                                    </td>
+                                    <td>
+                                        <div class='btn-group'><button type='button' class='editarButton btn btn-mini' title='Editar' id='ed_@item.id'><i class='icon-pencil'></i></button><button type='button' class='removebutton btn btn-mini' title='Eliminar' id='@item.id'><i class='icon-trash'></i></button></div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="form-horizontal">
+    <h4>Usuario</h4>
+    <hr />
+
+    <div class="form-group" style="display: none;" id="div_id">
+        <label class="form-control">id</label>
+        <div class="col-md-10">
+            <input type="text" id="id" class="form-control" readonly value="0" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-control">Email</label>
+        <div class="col-md-10">
+            <input type="email" id="email" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-control">Contraseña</label>
+        <div class="col-md-10">
+            <input type="password" id="password" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-control">Nombre</label>
+        <div class="col-md-10">
+            <input type="text" id="name" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-control">Apellido Paterno</label>
+        <div class="col-md-10">
+            <input type="text" id="lastName" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-control">Apellido Materno</label>
+        <div class="col-md-10">
+            <input type="text" id="surName" class="form-control" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button type="button" value="Crear" class="btn btn-default" id="btnCrear">Crear</button>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <script src="~/ScriptPages/jsUsuarios.js"></script>
+    <script src="~/ScriptPages/jsSurveyDataTables.js"></script>
+
+}

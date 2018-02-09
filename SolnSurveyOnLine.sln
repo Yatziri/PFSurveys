@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.Entidades", "Cuestionario.Entidades\Survey.Entidades.csproj", "{15F1458B-5604-4E93-8B74-3B33A382116E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.DataAccess", "Cuestionario.DataAccess\Survey.DataAccess.csproj", "{D2243470-99CE-4E8A-92F6-9C14ECE80E61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Survey.Business", "Cuestionario.Business\Survey.Business.csproj", "{D2795405-94DB-4DFD-B6C4-2BC065C249D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppSurveyOnLine", "WebAppSurveyOnLine\WebAppSurveyOnLine.csproj", "{0196D36B-34A8-4DCD-8B08-A8CD5290038C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15F1458B-5604-4E93-8B74-3B33A382116E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F1458B-5604-4E93-8B74-3B33A382116E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F1458B-5604-4E93-8B74-3B33A382116E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F1458B-5604-4E93-8B74-3B33A382116E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2243470-99CE-4E8A-92F6-9C14ECE80E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2243470-99CE-4E8A-92F6-9C14ECE80E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2243470-99CE-4E8A-92F6-9C14ECE80E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2243470-99CE-4E8A-92F6-9C14ECE80E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2795405-94DB-4DFD-B6C4-2BC065C249D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2795405-94DB-4DFD-B6C4-2BC065C249D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2795405-94DB-4DFD-B6C4-2BC065C249D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2795405-94DB-4DFD-B6C4-2BC065C249D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0196D36B-34A8-4DCD-8B08-A8CD5290038C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0196D36B-34A8-4DCD-8B08-A8CD5290038C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0196D36B-34A8-4DCD-8B08-A8CD5290038C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0196D36B-34A8-4DCD-8B08-A8CD5290038C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B24F70B8-F6DC-4B26-8E7F-2DD30AF95F4E}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://180.176.76.15:8086/tfs/cibergestionmexicocollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Cuestionario.Business\\Survey.Business.csproj
+		SccProjectName1 = Cuestionario.Business
+		SccLocalPath1 = Cuestionario.Business
+		SccProjectUniqueName2 = Cuestionario.DataAccess\\Survey.DataAccess.csproj
+		SccProjectName2 = Cuestionario.DataAccess
+		SccLocalPath2 = Cuestionario.DataAccess
+		SccProjectUniqueName3 = Cuestionario.Entidades\\Survey.Entidades.csproj
+		SccProjectName3 = Cuestionario.Entidades
+		SccLocalPath3 = Cuestionario.Entidades
+		SccProjectUniqueName4 = WebAppSurveyOnLine\\WebAppSurveyOnLine.csproj
+		SccProjectName4 = WebAppSurveyOnLine
+		SccLocalPath4 = WebAppSurveyOnLine
+	EndGlobalSection
+EndGlobal

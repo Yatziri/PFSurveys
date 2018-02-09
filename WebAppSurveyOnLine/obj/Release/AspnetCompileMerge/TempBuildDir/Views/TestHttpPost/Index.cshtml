@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("IngresoPost", "TestHttpPost", FormMethod.Post))
+{   
+    <div class="row-fluid">
+        <label>Id tipo de Actividad</label>
+        <input type="text" placeholder="Escribe algo…" class="span3" id="idActividad" name="idActividad" value="103">
+
+        <label>idUnidad</label>
+        <input type="text" placeholder="Escribe algo…" class="span3" id="idUnidadResponsable" name="idUnidadResponsable" value="103">
+
+       <button type="button" class="btn btn-primary" id="btnAceptar">Aceptar</button>
+        @*<input type="submit" class="btn btn-primary" value="Aceptar" id="btnAceptarx" />*@
+    </div>
+
+    
+}
+@using (Html.BeginForm("TestContestaEncuesta", "TestHttpPost", FormMethod.Post))
+{
+<br /><br /> <br /><br />
+<div>
+    Prueba Llenado de encuesta
+</div>
+<div class="row-fluid">
+    <div class="span4">
+        <label>id Actividad</label>
+        <input type="text" placeholder="Escribe algo…" class="span3" id="idTipoActividad" name="idTipoActividad" value="2" />
+    </div>
+    <div class="span4">
+        <label>id Usuario</label>
+        <input type="text" placeholder="Escribe algo…" class="span3" id="idUsuario" name="idUsuario" value="25" />
+    </div>
+    <div class="span4">
+        <label>tarea</label>
+        <input type="text" placeholder="Escribe algo…" class="span3" id="tarea" name="tarea" value="25" />
+    </div>
+    <input type="submit" class="btn btn-primary" value="Aceptar" />
+    @*<button type="button" class="btn btn-primary" id="btnConsultaEncuesta">Consultar Encuesta</button>*@
+</div>
+
+}
+
+@section Scripts
+{
+<script src="~/ScriptPages/jsTestHttpPost.js"></script>
+}

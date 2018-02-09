@@ -1,0 +1,220 @@
+﻿@model Survey.Entidades.Ctl_Surveys
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="w-box" id="n_regular_elements">
+    <div class="w-box-header">
+        <h4>Crear Encuesta</h4>
+    </div>
+    <div class="w-box-content cnt_a">
+
+        <form>
+            @Html.AntiForgeryToken()
+            @*<legend>Crear Encuesta</legend>*@
+            <div class="row-fluid">
+                <div class="span8">
+
+                    <label>Título de la encuesta</label>
+                    <input type="text" placeholder="Escribe algo…" class="span8" id="name" name="name"  onkeypress="return IsAlphaNumeric(event);"  value="@Model.name" maxlength="500" >
+                    <button type="button" class="btn btn-primary" id="btnGenerar">Generar</button>
+                </div>
+            </div>
+           
+
+            @*<div class="row-fluid">
+                <div class="span12">
+                    <div class="w-box w-box-green">
+                        <div class="w-box-header">
+                            <h4>Basic Datatables</h4>
+                        </div>
+                        <div class="w-box-content">
+                            <table id="dt_basic" class="dataTables_full table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>Encuesta</th>
+                                        <th>Descripción</th>
+                                        <th>Acciones</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Afghanistan</td>
+                                        <td>Islamic Republic of Afghanistan</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Aland Islands</td>
+                                        <td>Åland Islands</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Albania</td>
+                                        <td>Republic of Albania</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Algeria</td>
+                                        <td>People's Democratic Republic of Algeria</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>American Samoa</td>
+                                        <td>American Samoa</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Andorra</td>
+                                        <td>Principality of Andorra</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Angola</td>
+                                        <td>Republic of Angola</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Anguilla</td>
+                                        <td>Anguilla</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Antarctica</td>
+                                        <td>Antarctica</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Antigua and Barbuda</td>
+                                        <td>Antigua and Barbuda</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>Argentina</td>
+                                        <td>Argentine Republic</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>Armenia</td>
+                                        <td>Republic of Armenia</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>Aruba</td>
+                                        <td>Aruba</td>
+                                        <td>
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>*@
+
+
+
+        </form>
+    </div>
+</div>
+@section Scripts
+{
+<script src="~/ScriptPages/jsCuestionario.js"></script>
+}

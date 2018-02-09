@@ -1,0 +1,5 @@
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.Entidades\obj\Debug\Encuesta.Entidades.csprojResolveAssemblyReference.cache
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.Entidades\bin\Debug\Encuesta.Entidades.dll
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.Entidades\bin\Debug\Encuesta.Entidades.pdb
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.Entidades\obj\Debug\Encuesta.Entidades.dll
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.Entidades\obj\Debug\Encuesta.Entidades.pdb

@@ -1,0 +1,13 @@
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\bin\Debug\Survey.DataAccess.dll
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\bin\Debug\Survey.DataAccess.pdb
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\obj\Debug\Survey.DataAccess.dll
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\obj\Debug\Survey.DataAccess.pdb
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\bin\Debug\Survey.DataAccess.dll.config
+C:\ProyectosCompany\SolnCuestionarioOnLine\Cuestionario.DataAccess\obj\Debug\Survey.DataAccess.csprojResolveAssemblyReference.cache
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.DataAccess\bin\Debug\Survey.DataAccess.dll.config
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.DataAccess\bin\Debug\Survey.DataAccess.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.DataAccess\bin\Debug\Survey.DataAccess.pdb
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.DataAccess\obj\Debug\Survey.DataAccess.csproj.CoreCompileInputs.cache
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.DataAccess\obj\Debug\Survey.DataAccess.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.DataAccess\obj\Debug\Survey.DataAccess.pdb
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.DataAccess\obj\Debug\Survey.DataAccess.csprojResolveAssemblyReference.cache

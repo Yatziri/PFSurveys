@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Beoro Admin Template v1.1</title>
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        
+    <!-- common stylesheets-->
+        <!-- bootstrap framework css -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
+        <!-- iconSweet2 icon pack (16x16) -->
+            <link rel="stylesheet" href="img/icsw2_16/icsw2_16.css">
+        <!-- splashy icon pack -->
+            <link rel="stylesheet" href="img/splashy/splashy.css">
+        <!-- flag icons -->
+            <link rel="stylesheet" href="img/flags/flags.css">
+        <!-- power tooltips -->
+            <link rel="stylesheet" href="js/lib/powertip/jquery.powertip.css">
+        <!-- google web fonts -->
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Abel">
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+
+    <!-- aditional stylesheets -->
+        <!-- colorbox -->
+            <link rel="stylesheet" href="js/lib/colorbox/colorbox.css">
+
+
+        <!-- main stylesheet -->
+            <link rel="stylesheet" href="css/beoro.css">
+
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css"><![endif]-->
+        <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css"><![endif]-->
+            
+        <!--[if lt IE 9]>
+            <script src="js/ie/html5shiv.min.js"></script>
+            <script src="js/ie/respond.min.js"></script>
+            <script src="js/lib/flot-charts/excanvas.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body class="bg_d">
+    <!-- main wrapper (without footer) -->    
+        <div class="main-wrapper">
+        <!-- top bar -->
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <div class="pull-right top-search">
+                            <form action="" >
+                                <input type="text" name="q" id="q-main">
+                                <button class="btn"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                        <div id="fade-menu" class="pull-left">
+                            <ul class="clearfix" id="mobile-nav">
+                                <li>
+                                    <a href="javascript:void(0)">Forms</a>
+                                    <ul>
+                                        <li>
+                                            <a href="form_elements.html">Form elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="form_validation.html">Form validation</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Components</a>
+                                    <ul>
+                                        <li>
+                                            <a href="calendar.html">Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a href="charts.html">Charts</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact_list.html">Contact List</a>
+                                        </li>
+                                        <li>
+                                            <a href="datatables.html">Datatables</a>
+                                        </li>
+                                        <li>
+                                            <a href="editable_elements.html">Editable Elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="file_manager.html">File manager</a>
+                                        </li>
+                                        <li>
+                                            <a href="gallery.html">Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a href="gmaps.html">Google Maps</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Tables</a>
+                                            <ul>
+                                                <li><a href="tables_regular.html">Regular Tables</a></li>
+                                                <li><a href="table_stacking.html">Stacking Table</a></li>
+                                                <li><a href="table_examples.html">Table examples</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="wizard.html">Wizard</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">UI Elements</a>
+                                    <ul>
+                                        <li><a href="alerts_buttons.html">Alerts, Buttons</a></li>
+                                        <li><a href="grid.html">Grid</a></li>
+                                        <li><a href="icons.html">Icons</a></li>
+                                        <li>
+                                            <a href="notifications.html">Notifications</a>
+                                        </li>
+                                        <li><a href="tabs_accordions.html">Tabs, Accordions</a></li>
+                                        <li><a href="tooltips_popovers.html">Tooltips, Popovers</a></li>
+                                        <li><a href="typography.html">Typography</a></li>
+                                        <li><a href="widgets.html">Widgets</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Other pages</a>
+                                    <ul>
+                                        <li><a href="ajax_content.html">Ajax content</a></li>
+                                        <li><a href="blank.html">Blank page</a></li>
+                                        <li><a href="blog_page.html">Blog page</a></li>
+                                        <li><a href="blog_page_single.html">Blog page (single)</a></li>
+                                        <li><a href="error_404.html">Error 404</a></li>
+                                        <li><a href="help_faq.html">Help/Faq</a></li>
+                                        <li><a href="invoices.html">Invoices</a></li>
+                                        <li><a href="login.html">Login Page</a></li>
+                                        <li><a href="mailbox.html">Mailbox</a></li>
+                                        <li><a href="user_profile.html">User profile</a></li>
+                                        <li><a href="settings.html">Site Settings</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Sub-menu</a>
+                                    <ul>
+                                        <li><a href="#">Section 1</a></li>
+                                        <li><a href="#">Section 2</a></li>
+                                        <li><a href="#">Section 3</a></li>
+                                        <li>
+                                            <a href="#">Section 4</a>
+                                            <ul>
+                                                <li><a href="#">Section 4.1</a></li>
+                                                <li><a href="#">Section 4.2</a></li>
+                                                <li><a href="#">Section 4.3</a></li>
+                                                <li>
+                                                    <a href="#">Section 4.4</a>
+                                                    <ul>
+                                                        <li><a href="#">Section 4.4.1</a></li>
+                                                        <li><a href="#">Section 4.4.2</a></li>
+                                                        <li><a href="#">Section 4.4.4</a></li>
+                                                        <li><a href="#">Section 4.4.5</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Section5</a></li>
+                                        <li><a href="#">Section6</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- header -->
+            <header>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <div class="main-logo"><a href="dashboard.html"><img src="img/beoro_logo.png" alt="Beoro Admin"></a></div>
+                        </div>
+                        <div class="span5">
+                            <nav class="nav-icons">
+                                <ul>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Dashboard"><i class="icsw16-home"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Content"><i class="icsw16-create-write"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Mailbox"><i class="icsw16-mail"></i><span class="badge badge-info">6</span></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Comments"><i class="icsw16-speech-bubbles"></i><span class="badge badge-important">14</span></a></li>
+                                    <li class="active"><span class="ptip_s" title="Statistics (active)"><i class="icsw16-graph"></i></span></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Settings"><i class="icsw16-cog"></i></a></li>
+                                </ul>
+                             </nav>
+                        </div>
+                        <div class="span4">
+                            <div class="user-box">
+                                <div class="user-box-inner">
+                                    <img src="img/avatars/avatar.png" alt="" class="user-avatar img-avatar">
+                                    <div class="user-info">
+                                        Welcome, <strong>Jonathan</strong>
+                                        <ul class="unstyled">
+                                            <li><a href="user_profile.html">Settings</a></li>
+                                            <li>&middot;</li>
+                                            <li><a href="login.html">Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <!-- breadcrumbs -->
+            <div class="container-fluid">
+                <ul id="breadcrumbs">
+                    <li><a href="javascript:void(0)"><i class="icon-home"></i></a></li>
+                    <li><a href="javascript:void(0)">Content</a></li>
+                    <li><a href="javascript:void(0)">Article: Lorem ipsum dolor...</a></li>
+                    <li><a href="javascript:void(0)">Comments</a></li>
+                    <li><span>Lorem ipsum dolor sit amet...</span></li>
+                </ul>
+            </div>
+            
+        <!-- main content -->
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="w-box">
+                            <div class="w-box-header">
+                                <h4>Gallery</h4>
+                                <div class="pull-right">
+                                    <div class="toggle-group">
+                                        <span class="dropdown-toggle" data-toggle="dropdown">Actions <span class="caret"></span></span>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#" class="edit_selected_img">Edit selected</a></li>
+                                            <li><a href="#" class="remove_selected_img">Remove selected</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-box-content cnt_a">
+                                <ol id="large-filters" class="nav-beoro">
+                                    <li data-filter="folder_all" class="active">All</li>
+                                    <li data-filter="folder_1">Folder 1</li>
+                                    <li data-filter="folder_2">Folder 2</li>
+                                </ol>
+                                <div id="large_grid" class="wmk_grid">
+                                    <ul>
+                                        <li id="5100767f111e7" class="folder_all folder_2" data-folder="folder_2">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image01_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image01.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f11227" class="folder_all folder_1" data-folder="folder_1">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image02_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image02.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f11269" class="folder_all folder_2" data-folder="folder_2">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image03_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image03.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f112a6" class="folder_all folder_2" data-folder="folder_2">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image04_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image04.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f112e3" class="folder_all folder_2" data-folder="folder_2">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image05_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image05.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f1131f" class="folder_all folder_1" data-folder="folder_1">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image06_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image06.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f11359" class="folder_all folder_2" data-folder="folder_2">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image07_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image07.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f11394" class="folder_all folder_2" data-folder="folder_2">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image08_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image08.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f113cf" class="folder_all folder_1" data-folder="folder_1">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image09_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image09.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f1140c" class="folder_all folder_1" data-folder="folder_1">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image10_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image10.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f1144d" class="folder_all folder_1" data-folder="folder_1">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image11_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image11.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f11487" class="folder_all folder_2" data-folder="folder_2">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image12_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image12.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                        <li id="5100767f114bf" class="folder_all folder_2" data-folder="folder_2">
+                                            <span class="img_holder">
+                                                <img src="gallery/Image13_tn.jpg" alt="" />
+                                                <span class="imgTitle">Lorem ipsum dolor...</span>
+                                            </span>
+                                            <p class="img_actions">
+                                                <a class="img_action_zoom" href="gallery/Image13.jpg" title="Lorem ipsum dolor..."><i class="icon-search"></i></a>
+                                                <a class="img_action_edit" href="javascript:void(0)" title="Edit"><i class="icon-pencil"></i></a>
+                                                <a class="img_action_remove" href="javascript:void(0)" title="Remove"><i class="icon-trash"></i></a>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-box" id="edit_image_box" style="display:none">
+                            <div class="w-box-header">
+                                <h4>Edit image</h4>
+                                <div class="pull-right">
+                                    <i class="close_edit_box icon-remove icon-white"></i>
+                                </div>
+                            </div>
+                            <div class="w-box-content">
+                                <table class="table table-striped" id="edit_image_table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:90px">Image</th>
+                                            <th>Folder</th>
+                                            <th>Title</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <table style="display:none">
+                                <tr id="edit_image_template">
+                                    <td style="vertical-align:middle">
+                                        <img class="img-polaroid" style="width:80px" src="blank" alt="" />
+                                    </td>
+                                    <td style="vertical-align:middle">
+                                        <select name="edit_img_folder" class="edit_img_folder span10">
+                                            <option value="folder_1">Folder 1</option>
+                                            <option value="folder_2">Folder 2</option>
+                                        </select>
+                                    </td>
+                                    <td style="vertical-align:middle">
+                                        <input type="text" class="edit_img_title span10" />
+                                    </td>
+                                    <td style="vertical-align:middle">
+                                        <button class="btn edit_img_save">Save</button>
+                                        <input type="hidden" value="" class="edit_img_id"/>
+                                    </td>
+                                </tr>
+                                </table>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_space"></div>
+        </div> 
+
+    <!-- footer --> 
+        <footer>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span5">
+                        <div>&copy; Your Company 2012</div>
+                    </div>
+                    <div class="span7">
+                        <ul class="unstyled">
+                            <li><a href="#">First link</a></li>
+                            <li>&middot;</li>
+                            <li><a href="#">Second link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    <!-- Common JS -->
+        <!-- jQuery framework -->
+            <script src="js/jquery.min.js"></script>
+        <!-- bootstrap Framework plugins -->
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- top menu -->
+            <script src="js/jquery.fademenu.js"></script>
+        <!-- top mobile menu -->
+            <script src="js/selectnav.min.js"></script>
+        <!-- actual width/height of hidden DOM elements -->
+            <script src="js/jquery.actual.min.js"></script>
+        <!-- jquery easing animations -->
+            <script src="js/jquery.easing.1.3.min.js"></script>
+        <!-- power tooltips -->
+            <script src="js/lib/powertip/jquery.powertip-1.1.0.min.js"></script>
+        <!-- date library -->
+            <script src="js/moment.min.js"></script>
+        <!-- common functions -->
+            <script src="js/beoro_common.js"></script>
+
+        <!-- colorbox -->
+            <script src="js/lib/colorbox/jquery.colorbox.min.js"></script>
+        <!-- responsive image grid -->
+            <script src="js/lib/wookmark/jquery.imagesloaded.min.js"></script>
+            <script src="js/lib/wookmark/jquery.wookmark.min.js"></script>
+
+            <script src="js/pages/beoro_gallery.js"></script>
+
+    </body>
+</html>

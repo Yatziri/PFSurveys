@@ -1,0 +1,17 @@
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\Survey.Entidades.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\Survey.Entidades.pdb
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\obj\Release\Survey.Entidades.csproj.CoreCompileInputs.cache
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\obj\Release\Survey.Entidades.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\obj\Release\Survey.Entidades.pdb
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\obj\Release\Survey.Entidades.csprojResolveAssemblyReference.cache
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.Mvc.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.Razor.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.WebPages.Razor.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.WebPages.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\Microsoft.Web.Infrastructure.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.WebPages.Deployment.dll
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.Mvc.xml
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.Razor.xml
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.WebPages.Razor.xml
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.WebPages.xml
+C:\ProyectosCompany\SolnSurveyOnLine\Cuestionario.Entidades\bin\Release\System.Web.WebPages.Deployment.xml

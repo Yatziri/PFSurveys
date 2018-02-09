@@ -1,0 +1,624 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Beoro Admin Template v1.1</title>
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        
+    <!-- common stylesheets-->
+        <!-- bootstrap framework css -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
+        <!-- iconSweet2 icon pack (16x16) -->
+            <link rel="stylesheet" href="img/icsw2_16/icsw2_16.css">
+        <!-- splashy icon pack -->
+            <link rel="stylesheet" href="img/splashy/splashy.css">
+        <!-- flag icons -->
+            <link rel="stylesheet" href="img/flags/flags.css">
+        <!-- power tooltips -->
+            <link rel="stylesheet" href="js/lib/powertip/jquery.powertip.css">
+        <!-- google web fonts -->
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Abel">
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+
+    <!-- aditional stylesheets -->
+        <!-- colorbox -->
+            <link rel="stylesheet" href="js/lib/colorbox/colorbox.css">
+        <!-- datatables -->
+            <link rel="stylesheet" href="js/lib/datatables/css/datatables_beoro.css">
+
+
+        <!-- main stylesheet -->
+            <link rel="stylesheet" href="css/beoro.css">
+
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css"><![endif]-->
+        <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css"><![endif]-->
+            
+        <!--[if lt IE 9]>
+            <script src="js/ie/html5shiv.min.js"></script>
+            <script src="js/ie/respond.min.js"></script>
+            <script src="js/lib/flot-charts/excanvas.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body class="bg_d">
+    <!-- main wrapper (without footer) -->    
+        <div class="main-wrapper">
+        <!-- top bar -->
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <div class="pull-right top-search">
+                            <form action="" >
+                                <input type="text" name="q" id="q-main">
+                                <button class="btn"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                        <div id="fade-menu" class="pull-left">
+                            <ul class="clearfix" id="mobile-nav">
+                                <li>
+                                    <a href="javascript:void(0)">Forms</a>
+                                    <ul>
+                                        <li>
+                                            <a href="form_elements.html">Form elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="form_validation.html">Form validation</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Components</a>
+                                    <ul>
+                                        <li>
+                                            <a href="calendar.html">Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a href="charts.html">Charts</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact_list.html">Contact List</a>
+                                        </li>
+                                        <li>
+                                            <a href="datatables.html">Datatables</a>
+                                        </li>
+                                        <li>
+                                            <a href="editable_elements.html">Editable Elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="file_manager.html">File manager</a>
+                                        </li>
+                                        <li>
+                                            <a href="gallery.html">Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a href="gmaps.html">Google Maps</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Tables</a>
+                                            <ul>
+                                                <li><a href="tables_regular.html">Regular Tables</a></li>
+                                                <li><a href="table_stacking.html">Stacking Table</a></li>
+                                                <li><a href="table_examples.html">Table examples</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="wizard.html">Wizard</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">UI Elements</a>
+                                    <ul>
+                                        <li><a href="alerts_buttons.html">Alerts, Buttons</a></li>
+                                        <li><a href="grid.html">Grid</a></li>
+                                        <li><a href="icons.html">Icons</a></li>
+                                        <li>
+                                            <a href="notifications.html">Notifications</a>
+                                        </li>
+                                        <li><a href="tabs_accordions.html">Tabs, Accordions</a></li>
+                                        <li><a href="tooltips_popovers.html">Tooltips, Popovers</a></li>
+                                        <li><a href="typography.html">Typography</a></li>
+                                        <li><a href="widgets.html">Widgets</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Other pages</a>
+                                    <ul>
+                                        <li><a href="ajax_content.html">Ajax content</a></li>
+                                        <li><a href="blank.html">Blank page</a></li>
+                                        <li><a href="blog_page.html">Blog page</a></li>
+                                        <li><a href="blog_page_single.html">Blog page (single)</a></li>
+                                        <li><a href="error_404.html">Error 404</a></li>
+                                        <li><a href="help_faq.html">Help/Faq</a></li>
+                                        <li><a href="invoices.html">Invoices</a></li>
+                                        <li><a href="login.html">Login Page</a></li>
+                                        <li><a href="mailbox.html">Mailbox</a></li>
+                                        <li><a href="user_profile.html">User profile</a></li>
+                                        <li><a href="settings.html">Site Settings</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Sub-menu</a>
+                                    <ul>
+                                        <li><a href="#">Section 1</a></li>
+                                        <li><a href="#">Section 2</a></li>
+                                        <li><a href="#">Section 3</a></li>
+                                        <li>
+                                            <a href="#">Section 4</a>
+                                            <ul>
+                                                <li><a href="#">Section 4.1</a></li>
+                                                <li><a href="#">Section 4.2</a></li>
+                                                <li><a href="#">Section 4.3</a></li>
+                                                <li>
+                                                    <a href="#">Section 4.4</a>
+                                                    <ul>
+                                                        <li><a href="#">Section 4.4.1</a></li>
+                                                        <li><a href="#">Section 4.4.2</a></li>
+                                                        <li><a href="#">Section 4.4.4</a></li>
+                                                        <li><a href="#">Section 4.4.5</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Section5</a></li>
+                                        <li><a href="#">Section6</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- header -->
+            <header>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <div class="main-logo"><a href="dashboard.html"><img src="img/beoro_logo.png" alt="Beoro Admin"></a></div>
+                        </div>
+                        <div class="span5">
+                            <nav class="nav-icons">
+                                <ul>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Dashboard"><i class="icsw16-home"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Content"><i class="icsw16-create-write"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Mailbox"><i class="icsw16-mail"></i><span class="badge badge-info">6</span></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Comments"><i class="icsw16-speech-bubbles"></i><span class="badge badge-important">14</span></a></li>
+                                    <li class="active"><span class="ptip_s" title="Statistics (active)"><i class="icsw16-graph"></i></span></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Settings"><i class="icsw16-cog"></i></a></li>
+                                </ul>
+                             </nav>
+                        </div>
+                        <div class="span4">
+                            <div class="user-box">
+                                <div class="user-box-inner">
+                                    <img src="img/avatars/avatar.png" alt="" class="user-avatar img-avatar">
+                                    <div class="user-info">
+                                        Welcome, <strong>Jonathan</strong>
+                                        <ul class="unstyled">
+                                            <li><a href="user_profile.html">Settings</a></li>
+                                            <li>&middot;</li>
+                                            <li><a href="login.html">Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <!-- breadcrumbs -->
+            <div class="container-fluid">
+                <ul id="breadcrumbs">
+                    <li><a href="javascript:void(0)"><i class="icon-home"></i></a></li>
+                    <li><a href="javascript:void(0)">Content</a></li>
+                    <li><a href="javascript:void(0)">Article: Lorem ipsum dolor...</a></li>
+                    <li><a href="javascript:void(0)">Comments</a></li>
+                    <li><span>Lorem ipsum dolor sit amet...</span></li>
+                </ul>
+            </div>
+            
+        <!-- main content -->
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="w-box">
+                            <div class="w-box-header">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-inverse btn-mini delete_rows_simple" data-tableid="smpl_tbl" title="Edit">Delete</a>
+                                    <a href="#" class="btn btn-inverse btn-mini" title="View">Another Action</a>
+                                </div>
+                            </div>
+                            <div class="w-box-content">
+                                <table class="table table-striped" id="smpl_tbl">
+                                    <thead>
+                                        <tr>
+                                            <th class="table_checkbox"><input type="checkbox" name="select_rows" class="select_rows" data-tableid="smpl_tbl"/></th>
+                                            <th>id</th>
+                                            <th>Customer</th>
+                                            <th>Status</th>
+                                            <th>Date Added</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="select_row" /></td>
+                                            <td>134</td>
+                                            <td>Summer Throssell</td>
+                                            <td>Pending</td>
+                                            <td>24/04/2012</td>
+                                            <td>$120.23</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" /></td>
+                                            <td>133</td>
+                                            <td>Declan Pamphlett</td>
+                                            <td>Pending</td>
+                                            <td>23/04/2012</td>
+                                            <td>$320.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" /></td>
+                                            <td>132</td>
+                                            <td>Erin Church</td>
+                                            <td>Pending</td>
+                                            <td>23/04/2012</td>
+                                            <td>$44.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" /></td>
+                                            <td>131</td>
+                                            <td>Koby Auld</td>
+                                            <td>Pending</td>
+                                            <td>22/04/2012</td>
+                                            <td>$180.20</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" /></td>
+                                            <td>130</td>
+                                            <td>Anthony Pound</td>
+                                            <td>Pending</td>
+                                            <td>20/04/2012</td>
+                                            <td>$610.42</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="w-box-footer">
+                                <div class="pagination pagination-centered">
+                                    <ul>
+                                        <li class="disabled"><a href="#">Prev</a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-box">
+                            <div class="w-box-header">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-inverse btn-mini delete_rows_dt" data-tableid="dt_gal" title="Edit">Delete</a>
+                                    <a href="#" class="btn btn-inverse btn-mini" title="View">Another Action</a>
+                                </div>
+                            </div>
+                            <div class="w-box-content">
+                                <table class="table table-vam table-striped" id="dt_gal">
+                                    <thead>
+                                        <tr>
+                                            <th class="table_checkbox" style="width:13px"><input type="checkbox" name="select_rows" class="select_rows" data-tableid="dt_gal" /></th>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Size</th>
+                                            <th>Date</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image01.jpg" title="Image 01" class="thumbnail">
+                                                    <img alt="" src="gallery/Image01_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image01.jpg</small></td>
+                                            <td>126 KB</td>
+                                            <td>23/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image02.jpg" title="Image 02" class="thumbnail">
+                                                    <img alt="" src="gallery/Image02_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image02.jpg</small></td>
+                                            <td>297 KB</td>
+                                            <td>24/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image03.jpg" title="Image 03" class="thumbnail">
+                                                    <img alt="" src="gallery/Image03_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image03.jpg</small></td>
+                                            <td>327 KB</td>
+                                            <td>13/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image04.jpg" title="Image 04" class="thumbnail">
+                                                    <img alt="" src="gallery/Image04_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image04.jpg</small></td>
+                                            <td>161 KB</td>
+                                            <td>23/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image05.jpg" title="Image 05" class="thumbnail">
+                                                    <img alt="" src="gallery/Image05_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image05.jpg</small></td>
+                                            <td>455 KB</td>
+                                            <td>25/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image06.jpg" title="Image 06" class="thumbnail">
+                                                    <img alt="" src="gallery/Image06_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image06.jpg</small></td>
+                                            <td>249 KB</td>
+                                            <td>9/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image07.jpg" title="Image 07" class="thumbnail">
+                                                    <img alt="" src="gallery/Image07_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image07.jpg</small></td>
+                                            <td>455 KB</td>
+                                            <td>17/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image08.jpg" title="Image 08" class="thumbnail">
+                                                    <img alt="" src="gallery/Image08_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image08.jpg</small></td>
+                                            <td>194 KB</td>
+                                            <td>27/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image09.jpg" title="Image 09" class="thumbnail">
+                                                    <img alt="" src="gallery/Image09_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image09.jpg</small></td>
+                                            <td>216 KB</td>
+                                            <td>9/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image10.jpg" title="Image 10" class="thumbnail">
+                                                    <img alt="" src="gallery/Image10_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image10.jpg</small></td>
+                                            <td>198 KB</td>
+                                            <td>17/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image11.jpg" title="Image 11" class="thumbnail">
+                                                    <img alt="" src="gallery/Image11_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image11.jpg</small></td>
+                                            <td>187 KB</td>
+                                            <td>9/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image12.jpg" title="Image 12" class="thumbnail">
+                                                    <img alt="" src="gallery/Image12_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image12.jpg</small></td>
+                                            <td>180 KB</td>
+                                            <td>17/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="row_sel" class="row_sel" /></td>
+                                            <td style="width:60px">
+                                                <a href="gallery/Image13.jpg" title="Image 13" class="thumbnail">
+                                                    <img alt="" src="gallery/Image13_tn.jpg" style="height:50px;width:50px">
+                                                </a>
+                                            </td>
+                                            <td>Lorem ipsum dolor sit<br/><small>Image13.jpg</small></td>
+                                            <td>200 KB</td>
+                                            <td>9/12/2012</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a href="#" class="btn btn-mini" title="Edit"><i class="icon-pencil"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="View"><i class="icon-eye-open"></i></a>
+                                                    <a href="#" class="btn btn-mini" title="Delete"><i class="icon-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- confirmation box -->
+                        <div class="hide">
+                            <div id="confirm_dialog" class="cbox_content">
+                                <div class="sepH_c"><strong>Are you sure you want to delete this row(s)?</strong></div>
+                                <div>
+                                    <a href="#" class="btn btn-small btn-beoro-3 confirm_yes">Yes</a>
+                                    <a href="#" class="btn btn-small confirm_no">No</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_space"></div>
+        </div> 
+
+    <!-- footer --> 
+        <footer>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span5">
+                        <div>&copy; Your Company 2012</div>
+                    </div>
+                    <div class="span7">
+                        <ul class="unstyled">
+                            <li><a href="#">First link</a></li>
+                            <li>&middot;</li>
+                            <li><a href="#">Second link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    <!-- Common JS -->
+        <!-- jQuery framework -->
+            <script src="js/jquery.min.js"></script>
+        <!-- bootstrap Framework plugins -->
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- top menu -->
+            <script src="js/jquery.fademenu.js"></script>
+        <!-- top mobile menu -->
+            <script src="js/selectnav.min.js"></script>
+        <!-- actual width/height of hidden DOM elements -->
+            <script src="js/jquery.actual.min.js"></script>
+        <!-- jquery easing animations -->
+            <script src="js/jquery.easing.1.3.min.js"></script>
+        <!-- power tooltips -->
+            <script src="js/lib/powertip/jquery.powertip-1.1.0.min.js"></script>
+        <!-- date library -->
+            <script src="js/moment.min.js"></script>
+        <!-- common functions -->
+            <script src="js/beoro_common.js"></script>
+
+        <!-- datatables -->
+            <script src="js/lib/datatables/js/jquery.dataTables.min.js"></script>
+            <script src="js/lib/datatables/js/jquery.dataTables.sorting.js"></script>
+        <!-- datatables bootstrap integration -->
+            <script src="js/lib/datatables/js/jquery.dataTables.bootstrap.min.js"></script>
+        <!-- colorbox -->
+            <script src="js/lib/colorbox/jquery.colorbox.min.js"></script>
+
+            <script src="js/pages/beoro_tables.js"></script>
+
+    </body>
+</html>

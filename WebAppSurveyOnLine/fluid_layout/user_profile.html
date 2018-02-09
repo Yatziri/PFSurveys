@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Beoro Admin Template v1.1</title>
+        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <link rel="icon" type="image/ico" href="favicon.ico">
+        
+    <!-- common stylesheets-->
+        <!-- bootstrap framework css -->
+            <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+            <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
+        <!-- iconSweet2 icon pack (16x16) -->
+            <link rel="stylesheet" href="img/icsw2_16/icsw2_16.css">
+        <!-- splashy icon pack -->
+            <link rel="stylesheet" href="img/splashy/splashy.css">
+        <!-- flag icons -->
+            <link rel="stylesheet" href="img/flags/flags.css">
+        <!-- power tooltips -->
+            <link rel="stylesheet" href="js/lib/powertip/jquery.powertip.css">
+        <!-- google web fonts -->
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Abel">
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+
+    <!-- aditional stylesheets -->
+
+
+        <!-- main stylesheet -->
+            <link rel="stylesheet" href="css/beoro.css">
+
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css"><![endif]-->
+        <!--[if IE 9]><link rel="stylesheet" href="css/ie9.css"><![endif]-->
+            
+        <!--[if lt IE 9]>
+            <script src="js/ie/html5shiv.min.js"></script>
+            <script src="js/ie/respond.min.js"></script>
+            <script src="js/lib/flot-charts/excanvas.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body class="bg_d">
+    <!-- main wrapper (without footer) -->    
+        <div class="main-wrapper">
+        <!-- top bar -->
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <div class="pull-right top-search">
+                            <form action="" >
+                                <input type="text" name="q" id="q-main">
+                                <button class="btn"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                        <div id="fade-menu" class="pull-left">
+                            <ul class="clearfix" id="mobile-nav">
+                                <li>
+                                    <a href="javascript:void(0)">Forms</a>
+                                    <ul>
+                                        <li>
+                                            <a href="form_elements.html">Form elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="form_validation.html">Form validation</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Components</a>
+                                    <ul>
+                                        <li>
+                                            <a href="calendar.html">Calendar</a>
+                                        </li>
+                                        <li>
+                                            <a href="charts.html">Charts</a>
+                                        </li>
+                                        <li>
+                                            <a href="contact_list.html">Contact List</a>
+                                        </li>
+                                        <li>
+                                            <a href="datatables.html">Datatables</a>
+                                        </li>
+                                        <li>
+                                            <a href="editable_elements.html">Editable Elements</a>
+                                        </li>
+                                        <li>
+                                            <a href="file_manager.html">File manager</a>
+                                        </li>
+                                        <li>
+                                            <a href="gallery.html">Gallery</a>
+                                        </li>
+                                        <li>
+                                            <a href="gmaps.html">Google Maps</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Tables</a>
+                                            <ul>
+                                                <li><a href="tables_regular.html">Regular Tables</a></li>
+                                                <li><a href="table_stacking.html">Stacking Table</a></li>
+                                                <li><a href="table_examples.html">Table examples</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="wizard.html">Wizard</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">UI Elements</a>
+                                    <ul>
+                                        <li><a href="alerts_buttons.html">Alerts, Buttons</a></li>
+                                        <li><a href="grid.html">Grid</a></li>
+                                        <li><a href="icons.html">Icons</a></li>
+                                        <li>
+                                            <a href="notifications.html">Notifications</a>
+                                        </li>
+                                        <li><a href="tabs_accordions.html">Tabs, Accordions</a></li>
+                                        <li><a href="tooltips_popovers.html">Tooltips, Popovers</a></li>
+                                        <li><a href="typography.html">Typography</a></li>
+                                        <li><a href="widgets.html">Widgets</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Other pages</a>
+                                    <ul>
+                                        <li><a href="ajax_content.html">Ajax content</a></li>
+                                        <li><a href="blank.html">Blank page</a></li>
+                                        <li><a href="blog_page.html">Blog page</a></li>
+                                        <li><a href="blog_page_single.html">Blog page (single)</a></li>
+                                        <li><a href="error_404.html">Error 404</a></li>
+                                        <li><a href="help_faq.html">Help/Faq</a></li>
+                                        <li><a href="invoices.html">Invoices</a></li>
+                                        <li><a href="login.html">Login Page</a></li>
+                                        <li><a href="mailbox.html">Mailbox</a></li>
+                                        <li><a href="user_profile.html">User profile</a></li>
+                                        <li><a href="settings.html">Site Settings</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Sub-menu</a>
+                                    <ul>
+                                        <li><a href="#">Section 1</a></li>
+                                        <li><a href="#">Section 2</a></li>
+                                        <li><a href="#">Section 3</a></li>
+                                        <li>
+                                            <a href="#">Section 4</a>
+                                            <ul>
+                                                <li><a href="#">Section 4.1</a></li>
+                                                <li><a href="#">Section 4.2</a></li>
+                                                <li><a href="#">Section 4.3</a></li>
+                                                <li>
+                                                    <a href="#">Section 4.4</a>
+                                                    <ul>
+                                                        <li><a href="#">Section 4.4.1</a></li>
+                                                        <li><a href="#">Section 4.4.2</a></li>
+                                                        <li><a href="#">Section 4.4.4</a></li>
+                                                        <li><a href="#">Section 4.4.5</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Section5</a></li>
+                                        <li><a href="#">Section6</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- header -->
+            <header>
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <div class="span3">
+                            <div class="main-logo"><a href="dashboard.html"><img src="img/beoro_logo.png" alt="Beoro Admin"></a></div>
+                        </div>
+                        <div class="span5">
+                            <nav class="nav-icons">
+                                <ul>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Dashboard"><i class="icsw16-home"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Content"><i class="icsw16-create-write"></i></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Mailbox"><i class="icsw16-mail"></i><span class="badge badge-info">6</span></a></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Comments"><i class="icsw16-speech-bubbles"></i><span class="badge badge-important">14</span></a></li>
+                                    <li class="active"><span class="ptip_s" title="Statistics (active)"><i class="icsw16-graph"></i></span></li>
+                                    <li><a href="javascript:void(0)" class="ptip_s" title="Settings"><i class="icsw16-cog"></i></a></li>
+                                </ul>
+                             </nav>
+                        </div>
+                        <div class="span4">
+                            <div class="user-box">
+                                <div class="user-box-inner">
+                                    <img src="img/avatars/avatar.png" alt="" class="user-avatar img-avatar">
+                                    <div class="user-info">
+                                        Welcome, <strong>Jonathan</strong>
+                                        <ul class="unstyled">
+                                            <li><a href="user_profile.html">Settings</a></li>
+                                            <li>&middot;</li>
+                                            <li><a href="login.html">Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+        <!-- breadcrumbs -->
+            <div class="container-fluid">
+                <ul id="breadcrumbs">
+                    <li><a href="javascript:void(0)"><i class="icon-home"></i></a></li>
+                    <li><a href="javascript:void(0)">Content</a></li>
+                    <li><a href="javascript:void(0)">Article: Lorem ipsum dolor...</a></li>
+                    <li><a href="javascript:void(0)">Comments</a></li>
+                    <li><span>Lorem ipsum dolor sit amet...</span></li>
+                </ul>
+            </div>
+            
+        <!-- main content -->
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <div class="w-box">
+                            <div class="w-box-header">
+                                <h4>User profile</h4>
+                            </div>
+                            <div class="w-box-content cnt_a user_profile">
+                                <div class="row-fluid">
+                                    <div class="span2">
+                                        <div class="img-holder">
+                                            <img class="img-avatar" alt="" src="img/avatars/avatar.png">
+                                        </div>
+                                    </div>
+                                    <div class="span10">
+                                        <p class="formSep"><small class="muted">Verified:</small> <span class="label label-success">Yes</span></p>
+                                        <p class="formSep"><small class="muted">Username:</small> JSmith</p>
+                                        <p class="formSep"><small class="muted">Name:</small> Jonathan Smith</p>
+                                        <p class="formSep"><small class="muted">Gender:</small> Male</p>
+                                        <p class="formSep"><small class="muted">Birthday:</small> 24/06/1974</p>
+                                        <p class="formSep"><small class="muted">Email:</small> john@example.com</p>
+                                        <p class="formSep"><small class="muted">Subscription:</small> Newsletter, System messages</p>
+                                        <p class="formSep"><small class="muted">Languages:</small> English, French</p>
+                                        <p class="formSep"><small class="muted">Signature:</small> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id dui et elit laoreet mattis. Ut pellentesque sollicitudin velit et rutrum. Morbi massa massa, tincidunt vel condimentum in, porta id quam. Ut sit amet libero eget risus ullamcorper hendrerit. Quisque sit amet dui mi.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="w-box">
+                            <div class="w-box-header">
+                                <h4>User settings</h4>
+                            </div>
+                            <div class="w-box-content">
+                                <form>
+                                    <div class="formSep">
+                                        <label>Avatar</label>
+                                        <div class="fileupload fileupload-new" data-provides="fileupload">
+                                            <div class="fileupload-new thumbnail" style="width: 60px; height: 60px;"><img src="img/dummy_60x60.gif" alt="" ></div>
+                                            <div class="fileupload-preview fileupload-exists thumbnail" style="width: 60px; height: 60px;"></div>
+                                            <span class="btn btn-small btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file"></span>
+                                            <a href="#" class="btn btn-small btn-link fileupload-exists" data-dismiss="fileupload">Remove</a>
+                                        </div>
+                                    </div>
+                                    <div class="formSep">
+                                        <label for="u_username">Username</label>
+                                        <input type="text" id="u_username" name="u_username" class="span8" value="JSmith" />
+                                    </div>
+                                    <div class="formSep">
+                                        <label for="u_name">Name</label>
+                                        <input type="text" id="u_name" name="u_name" class="span8" value="John Smith" />
+                                    </div>
+                                    <div class="formSep">
+                                        <label for="u_password">Password</label>
+                                        <input type="password" id="u_password" name="u_password" class="span8" />
+                                        <span class="help-block">Enter Password</span>
+                                        <input type="password" id="u_repassword" name="u_repassword" class="span8" />
+                                        <span class="help-block">Repeat Password</span>
+                                    </div>
+                                    <div class="formSep">
+                                        <label for="u_email">Email</label>
+                                        <input type="text" id="u_email" name="u_email" class="span8" value="john@example.com" />
+                                    </div>
+                                    <div class="formSep">
+                                        <label>Gender</label>
+                                        <label for="u_male" class="radio inline"><input type="radio" name="u_gender" id="u_male"/> Male</label>
+                                        <label for="u_female" class="radio inline"><input type="radio" name="u_gender" id="u_female"/> Female</label>
+                                    </div>
+                                    <div class="formSep">
+                                        <label>I want to receive</label>
+                                        <label for="u_newsletter" class="checkbox inline"><input type="checkbox" name="u_newsletter" id="u_newsletter"/> Newsletter</label>
+                                        <label for="u_system_msg" class="checkbox inline"><input type="checkbox" name="u_system_msg" id="u_system_msg"/> System Messages</label>
+                                        <label for="u_other_msg" class="checkbox inline"><input type="checkbox" name="u_other_msg" id="u_other_msg"/> Other Messages</label>
+                                    </div>
+                                    <div class="formSep">
+                                        <label for="u_signature">Signature</label>
+                                        <textarea name="u_signature" id="u_signature" cols="30" rows="4" class="span8"></textarea>
+                                    </div>
+                                    <div class="formSep sepH_b">
+                                        <button class="btn btn-beoro-3" type="button">Save changes</button>
+                                        <a href="#" class="btn btn-link">Cancel</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_space"></div>
+        </div> 
+
+    <!-- footer --> 
+        <footer>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span5">
+                        <div>&copy; Your Company 2012</div>
+                    </div>
+                    <div class="span7">
+                        <ul class="unstyled">
+                            <li><a href="#">First link</a></li>
+                            <li>&middot;</li>
+                            <li><a href="#">Second link</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    <!-- Common JS -->
+        <!-- jQuery framework -->
+            <script src="js/jquery.min.js"></script>
+        <!-- bootstrap Framework plugins -->
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+        <!-- top menu -->
+            <script src="js/jquery.fademenu.js"></script>
+        <!-- top mobile menu -->
+            <script src="js/selectnav.min.js"></script>
+        <!-- actual width/height of hidden DOM elements -->
+            <script src="js/jquery.actual.min.js"></script>
+        <!-- jquery easing animations -->
+            <script src="js/jquery.easing.1.3.min.js"></script>
+        <!-- power tooltips -->
+            <script src="js/lib/powertip/jquery.powertip-1.1.0.min.js"></script>
+        <!-- date library -->
+            <script src="js/moment.min.js"></script>
+        <!-- common functions -->
+            <script src="js/beoro_common.js"></script>
+
+        <!-- file upload widget -->
+            <script src="js/form/bootstrap-fileupload.min.js"></script>
+
+    </body>
+</html>

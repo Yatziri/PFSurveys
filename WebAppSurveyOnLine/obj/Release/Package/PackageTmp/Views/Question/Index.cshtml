@@ -1,0 +1,200 @@
+﻿
+@model Survey.Entidades.Question
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="w-box" id="n_regular_elements">
+    <div class="w-box-header">
+        <h4>Preguntas</h4>
+    </div>
+    <div class="w-box-content cnt_a">
+
+        @using (Html.BeginForm("VistaPreliminar", "Question", FormMethod.Post))
+    {
+        <div class="row-fluid">
+            <div class="span8">
+                <label>Datos de la actividad</label>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span12">
+                <label>Encuesta: @Model.encuesta.name</label>
+                <label>idEncuesta: @Model.encuesta.idSurvey</label>
+                <label>idActividad: @Model.encuesta.idActivity</label>
+                <label>idUnidad: @Model.encuesta.idUnit</label>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span4">
+                <button type="button" class="btn btn-primary" id="btnNuevaPregunta">Nuevo</button>
+
+                <input type="hidden" name="GridHtml" />
+                <input type="submit" id="btnPDF" value="Vista Preliminar" />
+                @*<button type="button" class="btn btn-primary" id="btnVistaPreliminar">Vista Preliminar</button>*@
+
+            </div>
+            <div class="spa4">
+
+            </div>
+            <div class="spa4">
+                <button type="button" class="btn btn-primary" id="btnCerrarCuestionario">Cerrar Cuestionario</button>
+
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="w-box w-box-blue">
+                    <div class="w-box-header">
+                        <h4>Listado Preguntas</h4>
+                    </div>
+                    <div class="w-box-content" id="Grid">
+                        <table id="dt_Preguntas" class="dataTables_full table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>No.Pregunta</th>
+                                    <th>Pregunta</th>
+                                    <th>Tipo de respuesta</th>
+                                    <th>Respuesta multiple</th>
+                                    <th>Longitud Campo Texto</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.preguntas)
+                            {
+
+                                <tr>
+
+                                    <td>
+
+                                        @Html.DisplayFor(modelItem => item.numericalOrder)
+
+                                    </td>
+
+                                    <td>
+
+                                        @Html.DisplayFor(modelItem => item.question)
+
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.questionType)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.optionQuestion)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.textLength)
+                                    </td>
+                                    <td>
+                                        <div class='btn-group'><button type='button' class='editarButton btn btn-mini' title='Editar' id='ed_@item.numericalOrder'><i class='icon-pencil'></i></button><button type='button' class='removebutton btn btn-mini' title='Eliminar' id='@item.numericalOrder'><i class='icon-trash'></i></button><button type="button" class="upButton btn btn-mini"  id="up_@item.numericalOrder.ToString()"><i class="icon-arrow-up"></i></button><button type="button" class="downButton btn btn-mini" id="dw_@item.numericalOrder.ToString()"><i class="icon-arrow-down"></i></button></div>
+                                    </td>
+                                </tr>
+                        }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row-fluid" id="pnlModificaPregunta" style="display:none">
+            <div class="input-append">
+                <label>Pregunta a Modificar</label>
+                <input type="text" placeholder="Escribe algo…"  id="txtNumericalOrder" name="txtNumericalOrder" maxlength="5">
+            </div>
+        </div>
+            <div class="row-fluid" id="pnlNuevo" style="display:none">
+                <div class="span12">
+
+                    <label>Pregunta</label>
+                    <div class="input-append">
+                        <input type="text" placeholder="Escribe algo…" class="span8" id="txtPregunta" name="txtPregunta" maxlength="500">
+                        <button type="button" class="btn btn-primary" id="btnCancelar">Cancelar</button>
+                    </div>
+                    <label for="ui_slider3_sel" class="sepH_b">Seleccione el tipo de Pregunta</label>
+                    <select name="selectTipoPregunta" id="selectTipoPregunta" class="input-medium">
+                        <option value="0">--Seleccione--</option>
+                        <option value="1">Texto libre</option>
+                        <option value="2">Texto libre múltiple</option>
+                        <option value="3">Opción múltiple</option>
+                        <option value="4">Lista</option>
+                        <option value="5">Carga de foto</option>
+                        <option value="6">Entrada numérica</option>
+                        <option value="7">Entrada numérica múltiple</option>
+                        <option value="8">Si/no</option>
+                        <option value="9">Fecha</option>
+                        <option value="10">Tiempo</option>
+                        <option value="11">Fecha/Tiempo</option>
+                        <option value="12">Geo-posición</option>
+
+                    </select>
+                    <div id="longitudPnl" style="display:none">
+                        <label id="lblLongitud">Longitud del campo texto</label>
+                        <input type="text" placeholder="Escribe algo…" class="span3 numerico" id="txtLongitud" name="txtLongitud" maxlength="5" />
+                    </div>
+
+                    <div id="entradaNumerica" style="display:none">
+                        <label id="lblEntradaNumerica">Longitud del campo texto</label>
+                        <input type="text" placeholder="Escribe algo…" class="span3 numerico" maxlength="5" id="txtEntradaNumerica" name="txtEntradaNumerica" />
+                    </div>
+                    <div class="span12">
+                        <button type="button" class="btn btn-primary" id="btnPreguntaSimple" style="display:none">Ok</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid" id="panelPreguntaMultiple" style="display:none">
+                <div class="span12">
+                    <label>Respuesta</label>
+                    <input type="text" placeholder="Escribe algo…" class="span3" id="txtRespuesta" name="txtRespuesta">
+                    <button type="button" class="btn btn-primary" id="btnAgregar">Agregar</button>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="w-box w-box-blue">
+                            <div class="w-box-header">
+                                <h4>Repuestas</h4>
+                            </div>
+                            <div class="w-box-content">
+                                <table id="dt_Respuestas" class="dataTables_full table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Respuesta</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary" id="btnOk" name="btnOk">Ok</button>
+
+                    </div>
+                </div>
+            </div>
+
+            }
+        </div>
+</div>
+@section Scripts
+{
+    <script src="~/ScriptPages/jsPreguntas.js"></script>
+<script src="~/ScriptPages/jsSurveyDataTables.js"></script>
+@*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>*@
+<script type="text/javascript">
+        $(function () {
+            $("#btnPDF").click(function () {
+                $("input[name='GridHtml']").val($("#id=Grid").html());
+            });
+        });
+</script>
+    @*<script src="~/ScriptPages/jMask.js"></script>*@
+}
+
